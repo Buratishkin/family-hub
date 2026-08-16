@@ -1,0 +1,65 @@
+spring:
+  application:
+    name: familyHub
+  datasource:
+    url: ${FAMILYHUB_DATASOURCE_URL:jdbc:postgresql://localhost:5433/familyhub}
+    username: ${FAMILYHUB_POSTGRES_USER}
+    password: ${FAMILYHUB_POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: ${FAMILYHUB_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: record
+  grpc:
+    server:
+      port: 9090
+
+server:
+  address: 0.0.0.0
+  port: 8080
+
+family-hub:
+  version: 0.1
+  outbox:
+    topic: familyhub.domain-events
+    publish-delay-ms: 5000
+  kafka:
+    consumer:
+      domain-events:
+        group-id: familyhub-domain-event-logger
+  task:
+    remote-ports:
+      mode: in-process
+      grpc:
+        family-service:
+          host: localhost
+          port: 9090
+        address-service:
+          host: localhost
+          port: 9090
+  task-service:
+    base-url: ${FAMILYHUB_TASK_SERVICE_BASE_URL:http://localhost:8081}
+  address-service:
+    base-url: ${FAMILYHUB_ADDRESS_SERVICE_BASE_URL:http://localhost:8083}
+    internal-token: ${FAMILYHUB_INTERNAL_TOKEN}
+  family-service:
+    base-url: ${FAMILYHUB_FAMILY_SERVICE_BASE_URL:http://localhost:8084}
+    internal-token: ${FAMILYHUB_INTERNAL_TOKEN}
+  security:
+    encryptor:
+      salt: ${FAMILYHUB_ENCRYPTOR_SALT}
+      password: ${FAMILYHUB_ENCRYPTOR_PASSWORD}
+    jwt:
+      secret: ${FAMILYHUB_JWT_SECRET}
+      access-expiration: 900000
+      refresh-expiration: 604800000

@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test all backend modules
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      FAMILYHUB_POSTGRES_USER: familyhub
+      FAMILYHUB_POSTGRES_PASSWORD: ci-local-password
+      FAMILYHUB_JWT_SECRET: ci-local-jwt-secret-with-at-least-32-characters
+      FAMILYHUB_ENCRYPTOR_PASSWORD: ci-local-encryptor-password
+      FAMILYHUB_ENCRYPTOR_SALT: 0123456789abcdef
+      FAMILYHUB_INTERNAL_TOKEN: ci-local-internal-token
+      FAMILYHUB_KAFKA_BOOTSTRAP_SERVERS: localhost:9092
+      FAMILYHUB_NOTIFICATION_PUSH_PROVIDER: logging
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+          cache-dependency-path: |
+            pom.xml
+            auth-service/pom.xml
+            family-service/pom.xml
+            address-service/pom.xml
+            task-service/pom.xml
+            meal-service/pom.xml
+            notification-service/pom.xml
+            gateway/pom.xml
+
+      - name: Make Maven wrapper executable
+        run: chmod +x ./mvnw
+
+      - name: Test monolith BFF
+        run: ./mvnw --batch-mode test
+
+      - name: Test auth-service
+        run: ./mvnw --batch-mode -f auth-service/pom.xml test
+
+      - name: Test family-service
+        run: ./mvnw --batch-mode -f family-service/pom.xml test
+
+      - name: Test address-service
+        run: ./mvnw --batch-mode -f address-service/pom.xml test
+
+      - name: Test task-service
+        run: ./mvnw --batch-mode -f task-service/pom.xml test
+
+      - name: Test meal-service
+        run: ./mvnw --batch-mode -f meal-service/pom.xml test
+
+      - name: Test notification-service
+        run: ./mvnw --batch-mode -f notification-service/pom.xml test
+
+      - name: Test gateway
+        run: ./mvnw --batch-mode -f gateway/pom.xml test

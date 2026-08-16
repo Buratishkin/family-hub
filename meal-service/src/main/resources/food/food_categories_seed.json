@@ -1,0 +1,80 @@
+{
+    "idStrategy":  "stable_seed_ids",
+    "items":  [
+                  {
+                      "id":  1,
+                      "code":  "MEAT_AND_POULTRY",
+                      "name":  "Мясо и птица"
+                  },
+                  {
+                      "id":  2,
+                      "code":  "FISH_AND_SEAFOOD",
+                      "name":  "Рыба и морепродукты"
+                  },
+                  {
+                      "id":  3,
+                      "code":  "DAIRY_AND_EGGS",
+                      "name":  "Молочные продукты и яйца"
+                  },
+                  {
+                      "id":  4,
+                      "code":  "VEGETABLES",
+                      "name":  "Овощи"
+                  },
+                  {
+                      "id":  5,
+                      "code":  "FRUITS_AND_BERRIES",
+                      "name":  "Фрукты и ягоды"
+                  },
+                  {
+                      "id":  6,
+                      "code":  "HERBS_AND_SALADS",
+                      "name":  "Зелень и салаты"
+                  },
+                  {
+                      "id":  7,
+                      "code":  "GRAINS_LEGUMES_AND_PASTA",
+                      "name":  "Крупы, бобовые и макароны"
+                  },
+                  {
+                      "id":  8,
+                      "code":  "BREAD_AND_BAKERY",
+                      "name":  "Хлеб и выпечка"
+                  },
+                  {
+                      "id":  9,
+                      "code":  "NUTS_SEEDS_AND_DRIED_FRUITS",
+                      "name":  "Орехи, семена и сухофрукты"
+                  },
+                  {
+                      "id":  10,
+                      "code":  "OILS_SAUCES_AND_DRESSINGS",
+                      "name":  "Масла, соусы и заправки"
+                  },
+                  {
+                      "id":  11,
+                      "code":  "SPICES_AND_SEASONINGS",
+                      "name":  "Специи и приправы"
+                  },
+                  {
+                      "id":  12,
+                      "code":  "CANNED_AND_PICKLED",
+                      "name":  "Консервы и заготовки"
+                  },
+                  {
+                      "id":  13,
+                      "code":  "SWEETS_AND_DESSERTS",
+                      "name":  "Сладкое и десерты"
+                  },
+                  {
+                      "id":  14,
+                      "code":  "DRINKS",
+                      "name":  "Напитки"
+                  },
+                  {
+                      "id":  15,
+                      "code":  "OTHER",
+                      "name":  "Прочее"
+                  }
+              ]
+}

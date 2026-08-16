@@ -1,0 +1,2280 @@
+{
+    "idStrategy":  "stable_seed_ids_from_1",
+    "categoryFile":  "food_categories_seed.json",
+    "items":  [
+                  {
+                      "id":  1,
+                      "name":  "Куриная грудка",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  2,
+                      "name":  "Куриное бедро",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  3,
+                      "name":  "Куриная голень",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  4,
+                      "name":  "Куриные крылья",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  5,
+                      "name":  "Куриный фарш",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  6,
+                      "name":  "Куриная печень",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  7,
+                      "name":  "Индейка филе",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  8,
+                      "name":  "Индейка фарш",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  9,
+                      "name":  "Утка",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  10,
+                      "name":  "Гусь",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  11,
+                      "name":  "Говядина вырезка",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  12,
+                      "name":  "Говядина лопатка",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  13,
+                      "name":  "Говяжий фарш",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  14,
+                      "name":  "Говяжья печень",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  15,
+                      "name":  "Телятина",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  16,
+                      "name":  "Свинина шея",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  17,
+                      "name":  "Свинина карбонад",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  18,
+                      "name":  "Свиная вырезка",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  19,
+                      "name":  "Свиной фарш",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  20,
+                      "name":  "Свиные ребра",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  21,
+                      "name":  "Баранина",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  22,
+                      "name":  "Кролик",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  23,
+                      "name":  "Бекон",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  24,
+                      "name":  "Ветчина",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  25,
+                      "name":  "Колбаса вареная",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  26,
+                      "name":  "Колбаса копченая",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  27,
+                      "name":  "Сосиски",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  28,
+                      "name":  "Сардельки",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  29,
+                      "name":  "Прошутто",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  30,
+                      "name":  "Салями",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  31,
+                      "name":  "Тушенка говяжья",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  32,
+                      "name":  "Тушенка свиная",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  33,
+                      "name":  "Курица копченая",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  34,
+                      "name":  "Шпик",
+                      "categoryId":  1,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  35,
+                      "name":  "Семга",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  36,
+                      "name":  "Лосось",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  37,
+                      "name":  "Форель",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  38,
+                      "name":  "Горбуша",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  39,
+                      "name":  "Треска",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  40,
+                      "name":  "Минтай",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  41,
+                      "name":  "Хек",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  42,
+                      "name":  "Палтус",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  43,
+                      "name":  "Скумбрия",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  44,
+                      "name":  "Сельдь",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  45,
+                      "name":  "Тунец",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  46,
+                      "name":  "Сардина",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  47,
+                      "name":  "Камбала",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  48,
+                      "name":  "Сибас",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  49,
+                      "name":  "Дорадо",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  50,
+                      "name":  "Карп",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  51,
+                      "name":  "Судак",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  52,
+                      "name":  "Щука",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  53,
+                      "name":  "Креветки",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  54,
+                      "name":  "Кальмар",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  55,
+                      "name":  "Мидии",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  56,
+                      "name":  "Осьминог",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  57,
+                      "name":  "Крабовые палочки",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  58,
+                      "name":  "Краб",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  59,
+                      "name":  "Икра красная",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  60,
+                      "name":  "Икра трески",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  61,
+                      "name":  "Анчоусы",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  62,
+                      "name":  "Морской коктейль",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  63,
+                      "name":  "Гребешки",
+                      "categoryId":  2,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  64,
+                      "name":  "Молоко",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  65,
+                      "name":  "Молоко безлактозное",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  66,
+                      "name":  "Сливки",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  67,
+                      "name":  "Сметана",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  68,
+                      "name":  "Кефир",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  69,
+                      "name":  "Ряженка",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  70,
+                      "name":  "Йогурт натуральный",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  71,
+                      "name":  "Йогурт греческий",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  72,
+                      "name":  "Творог",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  73,
+                      "name":  "Творожный сыр",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  74,
+                      "name":  "Сыр твердый",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  75,
+                      "name":  "Сыр полутвердый",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  76,
+                      "name":  "Сыр плавленый",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  77,
+                      "name":  "Сыр моцарелла",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  78,
+                      "name":  "Сыр фета",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  79,
+                      "name":  "Сыр брынза",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  80,
+                      "name":  "Сыр пармезан",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  81,
+                      "name":  "Сыр сулугуни",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  82,
+                      "name":  "Масло сливочное",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  83,
+                      "name":  "Маскарпоне",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  84,
+                      "name":  "Рикотта",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  85,
+                      "name":  "Яйца куриные",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  86,
+                      "name":  "Яйца перепелиные",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  87,
+                      "name":  "Майонез домашний",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  88,
+                      "name":  "Сгущенное молоко",
+                      "categoryId":  3,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  89,
+                      "name":  "Картофель",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  90,
+                      "name":  "Морковь",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  91,
+                      "name":  "Лук репчатый",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  92,
+                      "name":  "Лук красный",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  93,
+                      "name":  "Чеснок",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  94,
+                      "name":  "Свекла",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  95,
+                      "name":  "Капуста белокочанная",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  96,
+                      "name":  "Капуста краснокочанная",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  97,
+                      "name":  "Капуста пекинская",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  98,
+                      "name":  "Капуста цветная",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  99,
+                      "name":  "Брокколи",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  100,
+                      "name":  "Кабачок",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  101,
+                      "name":  "Цукини",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  102,
+                      "name":  "Баклажан",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  103,
+                      "name":  "Огурец",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  104,
+                      "name":  "Помидор",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  105,
+                      "name":  "Черри",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  106,
+                      "name":  "Перец болгарский",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  107,
+                      "name":  "Перец чили",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  108,
+                      "name":  "Тыква",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  109,
+                      "name":  "Редис",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  110,
+                      "name":  "Редька",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  111,
+                      "name":  "Репа",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  112,
+                      "name":  "Пастернак",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  113,
+                      "name":  "Сельдерей корень",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  114,
+                      "name":  "Сельдерей стебель",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  115,
+                      "name":  "Кукуруза",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  116,
+                      "name":  "Горошек зеленый",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  117,
+                      "name":  "Фасоль стручковая",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  118,
+                      "name":  "Спаржа",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  119,
+                      "name":  "Артишок",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  120,
+                      "name":  "Авокадо",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  121,
+                      "name":  "Грибы шампиньоны",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  122,
+                      "name":  "Грибы вешенки",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  123,
+                      "name":  "Грибы белые",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  124,
+                      "name":  "Грибы шиитаке",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  125,
+                      "name":  "Имбирь корень",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  126,
+                      "name":  "Хрен корень",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  127,
+                      "name":  "Батат",
+                      "categoryId":  4,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  128,
+                      "name":  "Яблоко",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  129,
+                      "name":  "Груша",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  130,
+                      "name":  "Банан",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  131,
+                      "name":  "Апельсин",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  132,
+                      "name":  "Мандарин",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  133,
+                      "name":  "Лимон",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  134,
+                      "name":  "Лайм",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  135,
+                      "name":  "Грейпфрут",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  136,
+                      "name":  "Персик",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  137,
+                      "name":  "Нектарин",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  138,
+                      "name":  "Абрикос",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  139,
+                      "name":  "Слива",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  140,
+                      "name":  "Виноград",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  141,
+                      "name":  "Киви",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  142,
+                      "name":  "Ананас",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  143,
+                      "name":  "Манго",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  144,
+                      "name":  "Гранат",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  145,
+                      "name":  "Хурма",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  146,
+                      "name":  "Арбуз",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  147,
+                      "name":  "Дыня",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  148,
+                      "name":  "Клубника",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  149,
+                      "name":  "Малина",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  150,
+                      "name":  "Черника",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  151,
+                      "name":  "Голубика",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  152,
+                      "name":  "Смородина черная",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  153,
+                      "name":  "Смородина красная",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  154,
+                      "name":  "Крыжовник",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  155,
+                      "name":  "Вишня",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  156,
+                      "name":  "Черешня",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  157,
+                      "name":  "Клюква",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  158,
+                      "name":  "Брусника",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  159,
+                      "name":  "Финики",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  160,
+                      "name":  "Инжир свежий",
+                      "categoryId":  5,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  161,
+                      "name":  "Укроп",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  162,
+                      "name":  "Петрушка",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  163,
+                      "name":  "Кинза",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  164,
+                      "name":  "Базилик",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  165,
+                      "name":  "Мята",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  166,
+                      "name":  "Розмарин",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  167,
+                      "name":  "Тимьян",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  168,
+                      "name":  "Орегано свежий",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  169,
+                      "name":  "Шпинат",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  170,
+                      "name":  "Руккола",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  171,
+                      "name":  "Айсберг",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  172,
+                      "name":  "Романо",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  173,
+                      "name":  "Латук",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  174,
+                      "name":  "Щавель",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  175,
+                      "name":  "Зеленый лук",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  176,
+                      "name":  "Лук порей",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  177,
+                      "name":  "Микрозелень",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  178,
+                      "name":  "Морская капуста",
+                      "categoryId":  6,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  179,
+                      "name":  "Рис круглозерный",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  180,
+                      "name":  "Рис длиннозерный",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  181,
+                      "name":  "Рис басмати",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  182,
+                      "name":  "Рис жасмин",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  183,
+                      "name":  "Гречка",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  184,
+                      "name":  "Овсянка",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  185,
+                      "name":  "Пшено",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  186,
+                      "name":  "Перловка",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  187,
+                      "name":  "Булгур",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  188,
+                      "name":  "Кускус",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  189,
+                      "name":  "Киноа",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  190,
+                      "name":  "Манка",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  191,
+                      "name":  "Кукурузная крупа",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  192,
+                      "name":  "Ячневая крупа",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  193,
+                      "name":  "Пшеничная крупа",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  194,
+                      "name":  "Чечевица красная",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  195,
+                      "name":  "Чечевица зеленая",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  196,
+                      "name":  "Нут",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  197,
+                      "name":  "Фасоль красная",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  198,
+                      "name":  "Фасоль белая",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  199,
+                      "name":  "Горох колотый",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  200,
+                      "name":  "Маш",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  201,
+                      "name":  "Соя",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  202,
+                      "name":  "Макароны спагетти",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  203,
+                      "name":  "Макароны пенне",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  204,
+                      "name":  "Макароны фузилли",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  205,
+                      "name":  "Лапша яичная",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  206,
+                      "name":  "Лапша рисовая",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  207,
+                      "name":  "Лапша соба",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  208,
+                      "name":  "Лазанья листы",
+                      "categoryId":  7,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  209,
+                      "name":  "Хлеб белый",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  210,
+                      "name":  "Хлеб ржаной",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  211,
+                      "name":  "Хлеб цельнозерновой",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  212,
+                      "name":  "Багет",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  213,
+                      "name":  "Чиабатта",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  214,
+                      "name":  "Лаваш",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  215,
+                      "name":  "Пита",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  216,
+                      "name":  "Тортилья",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  217,
+                      "name":  "Булочка",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  218,
+                      "name":  "Булочка для бургеров",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  219,
+                      "name":  "Сухари панировочные",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  220,
+                      "name":  "Крекеры",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  221,
+                      "name":  "Тесто слоеное",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  222,
+                      "name":  "Тесто дрожжевое",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  223,
+                      "name":  "Тесто песочное",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  224,
+                      "name":  "Мука пшеничная",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  225,
+                      "name":  "Мука ржаная",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  226,
+                      "name":  "Мука рисовая",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  227,
+                      "name":  "Мука кукурузная",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  228,
+                      "name":  "Крахмал картофельный",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  229,
+                      "name":  "Крахмал кукурузный",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  230,
+                      "name":  "Разрыхлитель",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  231,
+                      "name":  "Дрожжи сухие",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  232,
+                      "name":  "Дрожжи свежие",
+                      "categoryId":  8,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  233,
+                      "name":  "Миндаль",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  234,
+                      "name":  "Фундук",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  235,
+                      "name":  "Грецкий орех",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  236,
+                      "name":  "Кешью",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  237,
+                      "name":  "Фисташки",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  238,
+                      "name":  "Арахис",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  239,
+                      "name":  "Кедровые орехи",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  240,
+                      "name":  "Пекан",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  241,
+                      "name":  "Макадамия",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  242,
+                      "name":  "Семечки подсолнечные",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  243,
+                      "name":  "Тыквенные семечки",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  244,
+                      "name":  "Кунжут",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  245,
+                      "name":  "Лен семена",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  246,
+                      "name":  "Чиа семена",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  247,
+                      "name":  "Изюм",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  248,
+                      "name":  "Курага",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  249,
+                      "name":  "Чернослив",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  250,
+                      "name":  "Сушеная клюква",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  251,
+                      "name":  "Сушеная вишня",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  252,
+                      "name":  "Кокосовая стружка",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  253,
+                      "name":  "Кокосовое молоко",
+                      "categoryId":  9,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  254,
+                      "name":  "Масло подсолнечное",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  255,
+                      "name":  "Масло оливковое",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  256,
+                      "name":  "Масло кукурузное",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  257,
+                      "name":  "Масло кунжутное",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  258,
+                      "name":  "Масло кокосовое",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  259,
+                      "name":  "Масло льняное",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  260,
+                      "name":  "Майонез",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  261,
+                      "name":  "Кетчуп",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  262,
+                      "name":  "Горчица",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  263,
+                      "name":  "Соевый соус",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  264,
+                      "name":  "Терияки соус",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  265,
+                      "name":  "Вустерширский соус",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  266,
+                      "name":  "Томатная паста",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  267,
+                      "name":  "Песто",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  268,
+                      "name":  "Тахини",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  269,
+                      "name":  "Уксус столовый",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  270,
+                      "name":  "Уксус яблочный",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  271,
+                      "name":  "Уксус винный",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  272,
+                      "name":  "Бальзамический уксус",
+                      "categoryId":  10,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  273,
+                      "name":  "Соль",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  274,
+                      "name":  "Сахар",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  275,
+                      "name":  "Перец черный",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  276,
+                      "name":  "Перец белый",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  277,
+                      "name":  "Паприка сладкая",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  278,
+                      "name":  "Паприка копченая",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  279,
+                      "name":  "Куркума",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  280,
+                      "name":  "Карри",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  281,
+                      "name":  "Кориандр молотый",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  282,
+                      "name":  "Кориандр зерна",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  283,
+                      "name":  "Кумин",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  284,
+                      "name":  "Зира",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  285,
+                      "name":  "Орегано сушеный",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  286,
+                      "name":  "Базилик сушеный",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  287,
+                      "name":  "Тимьян сушеный",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  288,
+                      "name":  "Розмарин сушеный",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  289,
+                      "name":  "Лавровый лист",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  290,
+                      "name":  "Корица",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  291,
+                      "name":  "Мускатный орех",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  292,
+                      "name":  "Гвоздика",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  293,
+                      "name":  "Кардамон",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  294,
+                      "name":  "Ванилин",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  295,
+                      "name":  "Ванильный сахар",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  296,
+                      "name":  "Сода пищевая",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  297,
+                      "name":  "Лимонная кислота",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  298,
+                      "name":  "Желатин",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  299,
+                      "name":  "Агар-агар",
+                      "categoryId":  11,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  300,
+                      "name":  "Кукуруза консервированная",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  301,
+                      "name":  "Горошек консервированный",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  302,
+                      "name":  "Фасоль консервированная",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  303,
+                      "name":  "Нут консервированный",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  304,
+                      "name":  "Томаты в собственном соку",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  305,
+                      "name":  "Помидоры вяленые",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  306,
+                      "name":  "Огурцы маринованные",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  307,
+                      "name":  "Огурцы соленые",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  308,
+                      "name":  "Капуста квашеная",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  309,
+                      "name":  "Оливки",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  310,
+                      "name":  "Маслины",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  311,
+                      "name":  "Грибы маринованные",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  312,
+                      "name":  "Тунец консервированный",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  313,
+                      "name":  "Сардины консервированные",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  314,
+                      "name":  "Шпроты",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  315,
+                      "name":  "Килька в томате",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  316,
+                      "name":  "Персики консервированные",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  317,
+                      "name":  "Ананасы консервированные",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  318,
+                      "name":  "Варенье клубничное",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  319,
+                      "name":  "Джем абрикосовый",
+                      "categoryId":  12,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  320,
+                      "name":  "Мед",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  321,
+                      "name":  "Шоколад темный",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  322,
+                      "name":  "Шоколад молочный",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  323,
+                      "name":  "Какао порошок",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  324,
+                      "name":  "Какао масло",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  325,
+                      "name":  "Печенье",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  326,
+                      "name":  "Вафли",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  327,
+                      "name":  "Маршмеллоу",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  328,
+                      "name":  "Зефир",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  329,
+                      "name":  "Мармелад",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  330,
+                      "name":  "Сироп кленовый",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  331,
+                      "name":  "Сироп шоколадный",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  332,
+                      "name":  "Паста арахисовая",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  333,
+                      "name":  "Паста шоколадная",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  334,
+                      "name":  "Мороженое",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  335,
+                      "name":  "Сливки взбитые",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  336,
+                      "name":  "Сахарная пудра",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  337,
+                      "name":  "Посыпка кондитерская",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  338,
+                      "name":  "Карамель",
+                      "categoryId":  13,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  339,
+                      "name":  "Чай черный",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  340,
+                      "name":  "Чай зеленый",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  341,
+                      "name":  "Чай травяной",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  342,
+                      "name":  "Кофе зерновой",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  343,
+                      "name":  "Кофе молотый",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  344,
+                      "name":  "Кофе растворимый",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  345,
+                      "name":  "Какао напиток",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  346,
+                      "name":  "Сок яблочный",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  347,
+                      "name":  "Сок апельсиновый",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  348,
+                      "name":  "Сок томатный",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  349,
+                      "name":  "Морс",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  350,
+                      "name":  "Компот",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  351,
+                      "name":  "Вода питьевая",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  352,
+                      "name":  "Вода газированная",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  353,
+                      "name":  "Минеральная вода",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  354,
+                      "name":  "Квас",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  355,
+                      "name":  "Лимонад",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  356,
+                      "name":  "Кокосовая вода",
+                      "categoryId":  14,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  357,
+                      "name":  "Мисо паста",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  358,
+                      "name":  "Нори",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  359,
+                      "name":  "Рисовая бумага",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  360,
+                      "name":  "Тофу",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  361,
+                      "name":  "Темпе",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  362,
+                      "name":  "Сейтан",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  363,
+                      "name":  "Протеин порошок",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  364,
+                      "name":  "Детское пюре",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  365,
+                      "name":  "Бульон куриный",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  366,
+                      "name":  "Бульон говяжий",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  367,
+                      "name":  "Бульон овощной",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  368,
+                      "name":  "Кокосовые сливки",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  369,
+                      "name":  "Сухое молоко",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  370,
+                      "name":  "Сливки сухие",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  371,
+                      "name":  "Сухари белые",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  372,
+                      "name":  "Чипсы",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  373,
+                      "name":  "Попкорн",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  374,
+                      "name":  "Замороженная овощная смесь",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  375,
+                      "name":  "Замороженные ягоды",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  376,
+                      "name":  "Пельмени",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  377,
+                      "name":  "Вареники",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  378,
+                      "name":  "Блины готовые",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  },
+                  {
+                      "id":  379,
+                      "name":  "Соль морская",
+                      "categoryId":  15,
+                      "isDefault":  true
+                  }
+              ]
+}

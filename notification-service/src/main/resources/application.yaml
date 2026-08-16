@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: notification-service
+  datasource:
+    url: ${FAMILYHUB_NOTIFICATION_DATASOURCE_URL:jdbc:postgresql://localhost:5439/notificationhub}
+    username: ${FAMILYHUB_POSTGRES_USER}
+    password: ${FAMILYHUB_POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: ${FAMILYHUB_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: record
+server:
+  address: 0.0.0.0
+  port: 8087
+
+family-hub:
+  outbox:
+    topic: familyhub.domain-events
+  kafka:
+    consumer:
+      notifications:
+        group-id: notification-service-notifications
+  notification:
+    dispatch-delay-ms: 5000
+    delivery-max-attempts: 3
+    push-provider: ${FAMILYHUB_NOTIFICATION_PUSH_PROVIDER:logging}
+    firebase:
+      credentials-path: ${FIREBASE_CREDENTIALS_PATH:}
+  security:
+    jwt:
+      secret: ${FAMILYHUB_JWT_SECRET}

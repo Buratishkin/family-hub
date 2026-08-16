@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package familyhub.remoteports;
+
+option java_multiple_files = true;
+option java_package = "org.buratishkin.familyhub.grpc";
+
+service FamilyAccessPortService {
+  rpc CurrentUser(CurrentUserRequest) returns (UserViewMessage);
+  rpc HasFamilyAccess(FamilyAccessRequest) returns (BooleanResponse);
+}
+
+service MemberLookupPortService {
+  rpc FindMemberById(MemberByIdRequest) returns (MemberViewMessage);
+  rpc FindMemberByFamilyIdAndUserId(MemberByFamilyAndUserRequest) returns (MemberViewMessage);
+  rpc FindMembersByFamilyId(MembersByFamilyRequest) returns (MemberListMessage);
+}
+
+service AddressLookupPortService {
+  rpc FindAddressById(AddressByIdRequest) returns (AddressViewMessage);
+}
+
+message CurrentUserRequest {
+  string username = 1;
+}
+
+message FamilyAccessRequest {
+  int64 user_id = 1;
+  int64 family_id = 2;
+}
+
+message MemberByIdRequest {
+  int64 member_id = 1;
+}
+
+message MemberByFamilyAndUserRequest {
+  int64 family_id = 1;
+  int64 user_id = 2;
+}
+
+message MembersByFamilyRequest {
+  int64 family_id = 1;
+}
+
+message AddressByIdRequest {
+  int64 address_id = 1;
+}
+
+message BooleanResponse {
+  bool value = 1;
+}
+
+message UserViewMessage {
+  int64 id = 1;
+  string username = 2;
+  string email = 3;
+}
+
+message MemberViewMessage {
+  int64 id = 1;
+  int64 family_id = 2;
+  int64 user_id = 3;
+  string username = 4;
+  string role = 5;
+  string default_name = 6;
+}
+
+message MemberListMessage {
+  repeated MemberViewMessage members = 1;
+}
+
+message AddressViewMessage {
+  int64 id = 1;
+  int64 family_id = 2;
+  int64 category_id = 3;
+  string name = 4;
+  string country = 5;
+  string city = 6;
+  string street_type = 7;
+  string street = 8;
+  string house = 9;
+  string apartment = 10;
+  string comment = 11;
+}

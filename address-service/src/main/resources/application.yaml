@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: address-service
+  datasource:
+    url: ${FAMILYHUB_ADDRESS_DATASOURCE_URL:jdbc:postgresql://localhost:5435/addresshub}
+    username: ${FAMILYHUB_POSTGRES_USER}
+    password: ${FAMILYHUB_POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: ${FAMILYHUB_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: record
+
+server:
+  address: 0.0.0.0
+  port: 8083
+
+family-hub:
+  outbox:
+    topic: familyhub.domain-events
+    publish-delay-ms: 5000
+  kafka:
+    consumer:
+      address-projections:
+        group-id: address-service-address-projections
+  security:
+    internal:
+      header-name: X-FamilyHub-Internal-Token
+      token: ${FAMILYHUB_INTERNAL_TOKEN}
+    jwt:
+      secret: ${FAMILYHUB_JWT_SECRET}
+  address:
+    family-service-base-url: ${FAMILYHUB_FAMILY_SERVICE_BASE_URL:http://localhost:8084}

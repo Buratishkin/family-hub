@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: ${FAMILYHUB_AUTH_DATASOURCE_URL:jdbc:postgresql://localhost:5437/authhub}
+    username: ${FAMILYHUB_POSTGRES_USER}
+    password: ${FAMILYHUB_POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: ${FAMILYHUB_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+server:
+  address: 0.0.0.0
+  port: 8085
+
+family-hub:
+  outbox:
+    topic: familyhub.domain-events
+    publish-delay-ms: 5000
+  security:
+    encryptor:
+      salt: ${FAMILYHUB_ENCRYPTOR_SALT}
+      password: ${FAMILYHUB_ENCRYPTOR_PASSWORD}
+    jwt:
+      secret: ${FAMILYHUB_JWT_SECRET}
+      access-expiration: 900000
+      refresh-expiration: 604800000

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: familyhub-gateway
+
+server:
+  address: 0.0.0.0
+  port: 8082
+
+family-hub:
+  gateway:
+    monolith-base-url: ${FAMILYHUB_MONOLITH_BASE_URL:http://localhost:8080}
+    task-service-base-url: ${FAMILYHUB_TASK_SERVICE_BASE_URL:http://localhost:8081}
+    address-service-base-url: ${FAMILYHUB_ADDRESS_SERVICE_BASE_URL:http://localhost:8083}
+    family-service-base-url: ${FAMILYHUB_FAMILY_SERVICE_BASE_URL:http://localhost:8084}
+    auth-service-base-url: ${FAMILYHUB_AUTH_SERVICE_BASE_URL:http://localhost:8085}
+    meal-service-base-url: ${FAMILYHUB_MEAL_SERVICE_BASE_URL:http://localhost:8086}
+    notification-service-base-url: ${FAMILYHUB_NOTIFICATION_SERVICE_BASE_URL:http://localhost:8087}

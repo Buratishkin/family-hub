@@ -1,0 +1,55 @@
+HELP.md
+target/
+out/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Public repository hygiene ###
+*.md
+!README.md
+docs/
+AGENTS.md
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Local secrets ###
+.env
+.env.*
+!.env.example
+.secrets/
+secrets/
+*.firebase-adminsdk*.json
+firebase-admin.json
+service-account*.json
+application-local.yaml
+application-local.yml
+**/application-local.yaml
+**/application-local.yml
+*.log

@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: family-service
+  datasource:
+    url: ${FAMILYHUB_FAMILY_DATASOURCE_URL:jdbc:postgresql://localhost:5436/familyservice}
+    username: ${FAMILYHUB_POSTGRES_USER}
+    password: ${FAMILYHUB_POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: ${FAMILYHUB_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: record
+
+server:
+  address: 0.0.0.0
+  port: 8084
+
+family-hub:
+  invite:
+    ttl-minutes: ${FAMILYHUB_INVITE_TTL_MINUTES:15}
+    deep-link-base: ${FAMILYHUB_INVITE_DEEP_LINK_BASE:familyhub://join}
+    public-join-url: ${FAMILYHUB_INVITE_PUBLIC_JOIN_URL:http://localhost:5173/invite}
+  outbox:
+    topic: familyhub.domain-events
+    publish-delay-ms: 5000
+  kafka:
+    consumer:
+      family-projections:
+        group-id: family-service-family-projections
+  security:
+    internal:
+      token: ${FAMILYHUB_INTERNAL_TOKEN}
+    jwt:
+      secret: ${FAMILYHUB_JWT_SECRET}

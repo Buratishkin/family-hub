@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: meal-service
+  datasource:
+    url: ${FAMILYHUB_MEAL_DATASOURCE_URL:jdbc:postgresql://localhost:5438/mealhub}
+    username: ${FAMILYHUB_POSTGRES_USER}
+    password: ${FAMILYHUB_POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+  kafka:
+    bootstrap-servers: ${FAMILYHUB_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: record
+server:
+  address: 0.0.0.0
+  port: 8086
+
+family-hub:
+  outbox:
+    topic: familyhub.domain-events
+  kafka:
+    consumer:
+      meal-projections:
+        group-id: meal-service-meal-projections
+  security:
+    jwt:
+      secret: ${FAMILYHUB_JWT_SECRET}
+    internal:
+      header-name: X-FamilyHub-Internal-Token
+      token: ${FAMILYHUB_INTERNAL_TOKEN}
+  meal:
+    task-service-base-url: ${FAMILYHUB_TASK_SERVICE_BASE_URL:http://localhost:8081}
+    family-service-base-url: ${FAMILYHUB_FAMILY_SERVICE_BASE_URL:http://localhost:8084}
