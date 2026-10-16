@@ -20,12 +20,5 @@ public interface FamilyPlanRepository extends JpaRepository<FamilyPlanEntity, Lo
             LocalDateTime from
     );
 
-    List<FamilyPlanEntity> findAllByFamilyIdAndMemberIdAndBusyFromLessThanEqualAndBusyToGreaterThanOrderByBusyFromAscIdAsc(
-            Long familyId,
-            Long memberId,
-            LocalDateTime startInclusive,
-            LocalDateTime startExclusive
-    );
-
     Optional<FamilyPlanEntity> findByIdAndFamilyId(Long id, Long familyId);
 }

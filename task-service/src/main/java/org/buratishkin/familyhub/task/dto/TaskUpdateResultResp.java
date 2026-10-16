@@ -5,8 +5,7 @@ import java.time.LocalDateTime;
 public record TaskUpdateResultResp(
         boolean result,
         String reason,
-        NextTaskResp nextTask,
-        java.util.List<TaskScheduleConflictResp> conflicts
+        NextTaskResp nextTask
 ) {
     public record NextTaskResp(
             Long id,

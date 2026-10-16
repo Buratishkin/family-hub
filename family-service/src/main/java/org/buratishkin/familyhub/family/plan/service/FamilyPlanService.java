@@ -104,20 +104,6 @@ public class FamilyPlanService {
         return planTrue(toResp(plan));
     }
 
-    @Transactional(readOnly = true)
-    public List<FamilyPlanResp> findInternalConflicts(Long familyId, Long memberId, LocalDateTime start) {
-        if (familyId == null || memberId == null || start == null) {
-            return List.of();
-        }
-        return toRespList(planRepository
-                .findAllByFamilyIdAndMemberIdAndBusyFromLessThanEqualAndBusyToGreaterThanOrderByBusyFromAscIdAsc(
-                        familyId,
-                        memberId,
-                        start,
-                        start
-                ));
-    }
-
     @Transactional
     public FamilyPlanCreateResultResp create(Long familyId,
                                              FamilyPlanCreateReq req,

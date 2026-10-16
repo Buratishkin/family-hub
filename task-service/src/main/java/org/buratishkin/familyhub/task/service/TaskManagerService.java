@@ -17,22 +17,18 @@ import org.buratishkin.familyhub.task.dto.TaskCreateReq;
 import org.buratishkin.familyhub.task.dto.TaskCreateResp;
 import org.buratishkin.familyhub.task.dto.TaskCreateResultResp;
 import org.buratishkin.familyhub.task.dto.TaskDeleteReq;
-import org.buratishkin.familyhub.task.dto.TaskScheduleConflictResp;
 import org.buratishkin.familyhub.task.dto.TaskUpdateResultResp;
 import org.buratishkin.familyhub.task.dto.TaskUpdateReq;
-import org.buratishkin.familyhub.task.enums.TaskStatusEnum;
 import org.buratishkin.familyhub.task.mapper.TaskMapper;
 import org.buratishkin.familyhub.task.port.TaskAddressLookupPort;
 import org.buratishkin.familyhub.task.port.TaskFamilyAccessPort;
 import org.buratishkin.familyhub.task.port.TaskMemberLookupPort;
 import org.buratishkin.familyhub.task.recurrence.TaskRecurrenceService;
-import org.buratishkin.familyhub.task.reminder.TaskReminderService;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
 
@@ -47,14 +43,11 @@ public class TaskManagerService {
     private final TaskFamilyAccessPort familyAccessPort;
     private final DomainEventPublisher domainEventPublisher;
     private final TaskRecurrenceService recurrenceService;
-    private final TaskReminderService reminderService;
-    private final TaskScheduleConflictService scheduleConflictService;
 
     @Transactional
     public TaskCreateResultResp create(TaskCreateReq createReq, Authentication authentication){
         UserView user = familyAccessPort.currentUser(authentication.getName());
         Long familyId = createReq.familyId();
-
         TaskCreateResultResp access = validateFamilyAccess(user.id(), familyId, this::getCreateFalseResult);
         if (access != null) {
             return access;
@@ -79,16 +72,6 @@ public class TaskManagerService {
         }
         if (!recurrenceService.isValid(createReq.recurrence(), createReq.start())) {
             return getCreateInvalidRecurrenceResult();
-        }
-
-        List<TaskScheduleConflictResp> conflicts = scheduleConflictService.findConflicts(
-                familyId,
-                assignee == null ? null : assignee.id(),
-                createReq.start(),
-                null
-        );
-        if (!conflicts.isEmpty()) {
-            return getCreateScheduleConflictResult(conflicts);
         }
 
         TaskEntity task = taskMapper.toEntity(createReq, creator.id(), assignee == null ? null : assignee.id());
@@ -116,8 +99,6 @@ public class TaskManagerService {
         Long recurrenceSeriesId = null;
         if (createReq.recurrence() != null) {
             recurrenceSeriesId = recurrenceService.createSeries(task, familyId, creator.id(), createReq.recurrence()).getId();
-        } else {
-            reminderService.scheduleForTask(familyId, task);
         }
         return getCreateTrueResult(new TaskCreateResp(task.getId(), recurrenceSeriesId));
     }
@@ -156,26 +137,8 @@ public class TaskManagerService {
         Long previousAssigneeId = task.getAssigneeId();
         var previousStatus = task.getStatus();
 
-        Long effectiveAssigneeId = updateReq.assigneeId() == null
-                ? task.getAssigneeId()
-                : assignee == null ? null : assignee.id();
-        LocalDateTime effectiveStart = updateReq.start() == null ? task.getStart() : updateReq.start();
-        TaskStatusEnum effectiveStatus = updateReq.status() == null ? task.getStatus() : updateReq.status();
-        if (scheduleConflictService.isActive(effectiveStatus)) {
-            List<TaskScheduleConflictResp> conflicts = scheduleConflictService.findConflicts(
-                    familyId,
-                    effectiveAssigneeId,
-                    effectiveStart,
-                    taskId
-            );
-            if (!conflicts.isEmpty()) {
-                return getUpdateScheduleConflictResult(conflicts);
-            }
-        }
-
         taskMapper.applyUpdate(updateReq, task, assignee == null ? null : assignee.id(), address == null ? null : address.id());
         taskCrudService.save(task);
-        reminderService.scheduleForTask(familyId, task);
         safePublish(new TaskUpdatedEvent(
                 task.getId(),
                 familyId,
@@ -216,7 +179,6 @@ public class TaskManagerService {
         }
 
         String taskName = task.getName();
-        reminderService.cancelPending(taskId);
         taskCrudService.delete(task);
         safePublish(new TaskDeletedEvent(
                 taskId,
@@ -263,8 +225,7 @@ public class TaskManagerService {
         return new TaskCreateResultResp(
                 false,
                 "invalid familyId",
-                null,
-                List.of()
+                null
         );
     }
 
@@ -272,17 +233,7 @@ public class TaskManagerService {
         return new TaskCreateResultResp(
                 false,
                 "invalid recurrence",
-                null,
-                List.of()
-        );
-    }
-
-    private TaskCreateResultResp getCreateScheduleConflictResult(List<TaskScheduleConflictResp> conflicts) {
-        return new TaskCreateResultResp(
-                false,
-                "schedule conflict",
-                null,
-                conflicts
+                null
         );
     }
 
@@ -290,8 +241,7 @@ public class TaskManagerService {
         return new TaskCreateResultResp(
                 true,
                 "good data",
-                createResp,
-                List.of()
+                createResp
         );
     }
 
@@ -299,17 +249,7 @@ public class TaskManagerService {
         return new TaskUpdateResultResp(
                 false,
                 "invalid familyId",
-                null,
-                List.of()
-        );
-    }
-
-    private TaskUpdateResultResp getUpdateScheduleConflictResult(List<TaskScheduleConflictResp> conflicts) {
-        return new TaskUpdateResultResp(
-                false,
-                "schedule conflict",
-                null,
-                conflicts
+                null
         );
     }
 
@@ -317,8 +257,7 @@ public class TaskManagerService {
         return new TaskUpdateResultResp(
                 true,
                 "good data",
-                nextTask,
-                List.of()
+                nextTask
         );
     }
 

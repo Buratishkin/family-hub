@@ -37,7 +37,8 @@ public class SecurityConfig {
                 .exceptionHandling(ex -> ex.authenticationEntryPoint(jwtAuthEntryPoint))
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/internal/**").hasAuthority(InternalServiceAuthFilter.AUTHORITY)
-                        .requestMatchers("/", "/health", "/error", "/favicon.ico").permitAll()
+                        .requestMatchers("/", "/health", "/error", "/favicon.ico",
+                                "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html").permitAll()
                         .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                         .anyRequest().authenticated()
                 );

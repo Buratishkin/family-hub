@@ -49,7 +49,6 @@ public class NotificationDomainEventConsumer {
     private static final String TASK_ASSIGNED = "org.buratishkin.familyhub.task.api.event.TaskAssignedEvent";
     private static final String TASK_UPDATED = "org.buratishkin.familyhub.task.api.event.TaskUpdatedEvent";
     private static final String TASK_DELETED = "org.buratishkin.familyhub.task.api.event.TaskDeletedEvent";
-    private static final String TASK_REMINDER_DUE = "org.buratishkin.familyhub.task.api.event.TaskReminderDueEvent";
     private static final String ADDRESS_CREATED = "org.buratishkin.familyhub.address.api.event.AddressCreatedEvent";
     private static final String ADDRESS_UPDATED = "org.buratishkin.familyhub.address.api.event.AddressUpdatedEvent";
     private static final String ADDRESS_DELETED = "org.buratishkin.familyhub.address.api.event.AddressDeletedEvent";
@@ -99,7 +98,6 @@ public class NotificationDomainEventConsumer {
                 case TASK_ASSIGNED -> notifyTaskAssigned(message);
                 case TASK_UPDATED -> notifyTaskUpdated(message);
                 case TASK_DELETED -> notifyTaskDeleted(message);
-                case TASK_REMINDER_DUE -> notifyTaskReminderDue(message);
                 case ADDRESS_CREATED -> notifyAddressCreated(message);
                 case ADDRESS_UPDATED -> notifyAddressUpdated(message);
                 case ADDRESS_DELETED -> notifyAddressDeleted(message);
@@ -263,21 +261,6 @@ public class NotificationDomainEventConsumer {
                 "TASK_DELETED",
                 titleWithName("Задача удалена", event.taskName()),
                 bodyWithName("Удалена задача", event.taskName(), "Семейная задача была удалена")
-        );
-    }
-
-    private void notifyTaskReminderDue(KafkaDomainEventMessage message) throws Exception {
-        TaskReminderDuePayload event = objectMapper.readValue(message.payload(), TaskReminderDuePayload.class);
-        Long recipientMemberId = event.assigneeMemberId() == null ? event.creatorMemberId() : event.assigneeMemberId();
-        notifyMember(
-                recipientMemberId,
-                message,
-                event.familyId(),
-                "TASK_REMINDER_" + event.reminderMinutes() + "M",
-                taskReminderTitle(event.reminderMinutes(), event.taskName()),
-                taskReminderBody(event.reminderMinutes(), event.taskName()),
-                TASK_AGGREGATE_TYPE,
-                event.taskId() == null ? message.aggregateId() : event.taskId().toString()
         );
     }
 
@@ -560,19 +543,6 @@ public class NotificationDomainEventConsumer {
     public record TaskDeletedPayload(Long taskId, Long familyId, Long deletedByUserId, String taskName, LocalDateTime occurredAt) implements FamilyPayload {
     }
 
-    public record TaskReminderDuePayload(
-            Long taskReminderId,
-            Long taskId,
-            Long familyId,
-            Long creatorMemberId,
-            Long assigneeMemberId,
-            String taskName,
-            LocalDateTime taskStart,
-            Integer reminderMinutes,
-            LocalDateTime occurredAt
-    ) implements FamilyPayload {
-    }
-
     public record AddressCreatedPayload(
             Long addressId,
             Long familyId,
@@ -665,19 +635,4 @@ public class NotificationDomainEventConsumer {
         return trimBody(actor + " " + action + ": \"" + normalizedTitle + "\"");
     }
 
-    private String taskReminderTitle(Integer reminderMinutes, String taskName) {
-        String prefix = reminderMinutes == null
-                ? "Скоро задача"
-                : "Задача через " + reminderMinutes + " мин";
-        return titleWithName(prefix, taskName);
-    }
-
-    private String taskReminderBody(Integer reminderMinutes, String taskName) {
-        String normalizedTaskName = normalizedName(taskName);
-        String timeText = reminderMinutes == null ? "скоро" : "через " + reminderMinutes + " мин";
-        if (normalizedTaskName == null) {
-            return trimBody("Задача начнется " + timeText);
-        }
-        return trimBody("Задача \"" + normalizedTaskName + "\" начнется " + timeText);
-    }
 }

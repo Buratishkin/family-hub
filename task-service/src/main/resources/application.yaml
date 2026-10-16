@@ -7,7 +7,7 @@ spring:
     password: ${FAMILYHUB_POSTGRES_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
   kafka:
     bootstrap-servers: ${FAMILYHUB_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
     producer:

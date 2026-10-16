@@ -13,7 +13,6 @@ import org.buratishkin.familyhub.task.api.event.TaskDeletedEvent;
 import org.buratishkin.familyhub.task.dto.TaskRecurrenceReq;
 import org.buratishkin.familyhub.task.dto.TaskUpdateResultResp;
 import org.buratishkin.familyhub.task.enums.TaskStatusEnum;
-import org.buratishkin.familyhub.task.reminder.TaskReminderService;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -32,7 +31,6 @@ public class TaskRecurrenceService {
     private final TaskRecurrenceSeriesRepository seriesRepository;
     private final TaskRepository taskRepository;
     private final DomainEventPublisher domainEventPublisher;
-    private final TaskReminderService reminderService;
 
     public boolean isValid(TaskRecurrenceReq recurrence, LocalDateTime start) {
         if (recurrence == null) {
@@ -72,7 +70,6 @@ public class TaskRecurrenceService {
         rootTask.setRecurrenceParentTaskId(null);
         rootTask.setRecurrenceIndex(1);
         taskRepository.save(rootTask);
-        reminderService.scheduleForTask(familyId, rootTask);
 
         fillLookahead(series, rootTask);
         return series;
@@ -142,7 +139,6 @@ public class TaskRecurrenceService {
         for (TaskEntity task : tasks) {
             Long taskId = task.getId();
             String taskName = task.getName();
-            reminderService.cancelPending(taskId);
             taskRepository.delete(task);
             safePublish(new TaskDeletedEvent(
                     taskId,
@@ -192,7 +188,6 @@ public class TaskRecurrenceService {
 
         series.setGeneratedOccurrencesCount(nextIndex);
         seriesRepository.save(series);
-        reminderService.scheduleForTask(series.getFamilyId(), task);
         publishCreated(series.getFamilyId(), task);
         return task;
     }

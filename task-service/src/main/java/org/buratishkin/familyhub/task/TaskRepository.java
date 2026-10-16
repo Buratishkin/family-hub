@@ -1,9 +1,9 @@
 package org.buratishkin.familyhub.task;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.buratishkin.familyhub.task.enums.TaskStatusEnum;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.buratishkin.familyhub.task.enums.TaskStatusEnum;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
@@ -39,19 +39,6 @@ public interface TaskRepository extends JpaRepository<TaskEntity, Long> {
     long countByRecurrenceSeriesIdAndStatusIn(Long recurrenceSeriesId, Collection<TaskStatusEnum> statuses);
 
     List<TaskEntity> findAllByRecurrenceSeriesIdAndStatusIn(Long recurrenceSeriesId, Collection<TaskStatusEnum> statuses);
-
-    @Query("""
-            select task from TaskEntity task
-            where task.assigneeId = :assigneeId
-              and task.start = :start
-              and task.status in :activeStatuses
-              and (:excludedTaskId is null or task.id <> :excludedTaskId)
-            order by task.id asc
-            """)
-    List<TaskEntity> findScheduleConflicts(@Param("assigneeId") Long assigneeId,
-                                           @Param("start") LocalDateTime start,
-                                           @Param("activeStatuses") Collection<TaskStatusEnum> activeStatuses,
-                                           @Param("excludedTaskId") Long excludedTaskId);
 
     List<TaskEntity> findAllByRecurrenceSeriesIdAndRecurrenceIndexGreaterThanEqualOrderByRecurrenceIndexAsc(
             Long recurrenceSeriesId,

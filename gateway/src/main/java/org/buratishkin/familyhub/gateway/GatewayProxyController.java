@@ -34,10 +34,11 @@ public class GatewayProxyController {
     );
 
     private final GatewayProperties properties;
-    private final HttpClient httpClient = HttpClient.newHttpClient();
+    private final HttpClient httpClient;
 
     public GatewayProxyController(GatewayProperties properties) {
         this.properties = properties;
+        this.httpClient = HttpClient.newHttpClient();
     }
 
     @RequestMapping({"/task/**", "/task-recurrence-series/**"})

@@ -29,8 +29,6 @@ class NotificationDomainEventConsumerTest {
             "org.buratishkin.familyhub.family.poll.api.event.PollCreatedEvent";
     private static final String FAMILY_PLAN_CREATED_EVENT =
             "org.buratishkin.familyhub.family.plan.api.event.FamilyPlanCreatedEvent";
-    private static final String TASK_REMINDER_DUE_EVENT =
-            "org.buratishkin.familyhub.task.api.event.TaskReminderDueEvent";
 
     @Mock
     private ProcessedEventService processedEventService;
@@ -165,63 +163,4 @@ class NotificationDomainEventConsumerTest {
         assertThat(command.aggregateId()).isEqualTo("2001");
     }
 
-    @Test
-    void createsTaskReminderForAssignee() throws Exception {
-        UUID eventId = UUID.randomUUID();
-        String envelopeJson = "task-reminder-envelope-json";
-        String payloadJson = "task-reminder-payload-json";
-        DomainEventEnvelope envelope = new DomainEventEnvelope(
-                1,
-                eventId,
-                TASK_REMINDER_DUE_EVENT,
-                "Task",
-                "3001",
-                LocalDateTime.parse("2026-08-12T16:00:00"),
-                payloadJson
-        );
-        NotificationDomainEventConsumer.TaskReminderDuePayload payload =
-                new NotificationDomainEventConsumer.TaskReminderDuePayload(
-                        9001L,
-                        3001L,
-                        1L,
-                        77L,
-                        88L,
-                        "Buy milk",
-                        LocalDateTime.parse("2026-08-12T18:00:00"),
-                        120,
-                        LocalDateTime.parse("2026-08-12T16:00:00")
-                );
-
-        when(processedEventService.processOnce(any(), any())).thenAnswer(invocation -> {
-            Runnable handler = invocation.getArgument(1);
-            handler.run();
-            return true;
-        });
-        when(objectMapper.readValue(envelopeJson, DomainEventEnvelope.class)).thenReturn(envelope);
-        when(objectMapper.readValue(payloadJson, NotificationDomainEventConsumer.TaskReminderDuePayload.class))
-                .thenReturn(payload);
-        when(projectionService.findUserIdByMemberId(88L)).thenReturn(java.util.Optional.of(6L));
-
-        NotificationDomainEventConsumer consumer = new NotificationDomainEventConsumer(
-                processedEventService,
-                projectionService,
-                notificationService,
-                objectMapper
-        );
-        consumer.consume(new ConsumerRecord<>("familyhub.domain-events", 0, 0L, "key", envelopeJson));
-
-        @SuppressWarnings("unchecked")
-        ArgumentCaptor<Collection<Long>> recipientsCaptor = ArgumentCaptor.forClass(Collection.class);
-        ArgumentCaptor<CreateNotificationCommand> commandCaptor =
-                ArgumentCaptor.forClass(CreateNotificationCommand.class);
-        verify(notificationService).createForUsers(recipientsCaptor.capture(), commandCaptor.capture());
-
-        assertThat(recipientsCaptor.getValue()).containsExactly(6L);
-        CreateNotificationCommand command = commandCaptor.getValue();
-        assertThat(command.type()).isEqualTo("TASK_REMINDER_120M");
-        assertThat(command.title()).isEqualTo("Задача через 120 мин: Buy milk");
-        assertThat(command.body()).isEqualTo("Задача \"Buy milk\" начнется через 120 мин");
-        assertThat(command.aggregateType()).isEqualTo("Task");
-        assertThat(command.aggregateId()).isEqualTo("3001");
-    }
 }

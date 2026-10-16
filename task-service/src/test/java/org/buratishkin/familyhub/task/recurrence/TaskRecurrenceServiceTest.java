@@ -8,7 +8,6 @@ import org.buratishkin.familyhub.task.dto.TaskRecurrenceReq;
 import org.buratishkin.familyhub.task.dto.TaskUpdateResultResp;
 import org.buratishkin.familyhub.task.enums.TaskEnum;
 import org.buratishkin.familyhub.task.enums.TaskStatusEnum;
-import org.buratishkin.familyhub.task.reminder.TaskReminderService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentMatchers;
@@ -42,9 +41,6 @@ class TaskRecurrenceServiceTest {
 
     @Mock
     private DomainEventPublisher domainEventPublisher;
-
-    @Mock
-    private TaskReminderService reminderService;
 
     @InjectMocks
     private TaskRecurrenceService recurrenceService;
@@ -130,9 +126,6 @@ class TaskRecurrenceServiceTest {
         assertThat(series.getCancelledAt()).isNotNull();
         assertThat(deletedTaskIds).containsExactly(202L, 203L, 204L);
         verify(taskRepository, never()).delete(previous);
-        verify(reminderService).cancelPending(202L);
-        verify(reminderService).cancelPending(203L);
-        verify(reminderService).cancelPending(204L);
         verify(taskRepository).delete(anchor);
         verify(taskRepository).delete(futureOne);
         verify(taskRepository).delete(futureTwo);

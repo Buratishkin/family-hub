@@ -19,9 +19,12 @@ public class ProjectionTaskFamilyAccessPort implements TaskFamilyAccessPort {
     private final TaskDependencyProjectionService projectionService;
     private final FamilyServiceInternalClient familyServiceInternalClient;
 
+    // метод для получения текущего юзера
     @Override
     public UserView currentUser(String username) {
         TaskUserProjectionEntity user = userRepository.findByUsername(username).orElseGet(() -> {
+            // если пользователя не нашли в бд по юзернейму,
+            // то хотим
             UserView remoteUser = familyServiceInternalClient.currentUser(username);
             projectionService.applyUserRegistered(remoteUser.id(), remoteUser.username(), remoteUser.email());
             return userRepository.findByUsername(username)

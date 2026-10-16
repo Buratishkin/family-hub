@@ -13,7 +13,6 @@ final class OutboxEventMetadata {
             "inviteId",
             "aliasId",
             "memberId",
-            "taskReminderId",
             "userId"
     };
 

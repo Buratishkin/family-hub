@@ -134,32 +134,6 @@ class FamilyPlanServiceTest {
     }
 
     @Test
-    void findInternalConflictsUsesInclusiveStartExclusiveEndPointQuery() {
-        LocalDateTime start = LocalDateTime.of(2026, 8, 12, 14, 30);
-        FamilyPlanEntity plan = plan(
-                1001L,
-                10L,
-                77L,
-                LocalDateTime.of(2026, 8, 12, 14, 0),
-                LocalDateTime.of(2026, 8, 12, 15, 0)
-        );
-        when(planRepository.findAllByFamilyIdAndMemberIdAndBusyFromLessThanEqualAndBusyToGreaterThanOrderByBusyFromAscIdAsc(
-                10L,
-                77L,
-                start,
-                start
-        )).thenReturn(List.of(plan));
-        when(memberRepository.findAllById(any())).thenReturn(List.of(member(77L, 1L, "Masha")));
-
-        var conflicts = familyPlanService.findInternalConflicts(10L, 77L, start);
-
-        assertThat(conflicts).hasSize(1);
-        assertThat(conflicts.getFirst().id()).isEqualTo(1001L);
-        assertThat(conflicts.getFirst().busyFrom()).isEqualTo(LocalDateTime.of(2026, 8, 12, 14, 0));
-        assertThat(conflicts.getFirst().busyTo()).isEqualTo(LocalDateTime.of(2026, 8, 12, 15, 0));
-    }
-
-    @Test
     void updateRejectsPlanOwnedByAnotherMember() {
         LocalDateTime from = LocalDateTime.of(2026, 8, 12, 18, 0);
         LocalDateTime to = LocalDateTime.of(2026, 8, 12, 19, 0);
